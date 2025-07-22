@@ -8,6 +8,10 @@
     text-decoration: none;
     color: var(--color-logo);
 
+    &:hover {
+        color: var(--color-logo);
+    }
+
     &__img {
         height: to-rem(36px);
 
@@ -18,15 +22,27 @@
 
     &__text {
         font-weight: 500;
-        font-size: to-rem(36px);
-        margin-left: to-rem(8px);
+        font-size: to-rem(24px);
+        padding-left: to-rem(8px);
         position: relative;
 
-        @include media(tablet) {
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: to-rem(3px);
+            height: 100%;
+            background-color: var(--color-logo);
         }
-    }
 
-    &:hover {
-        color: var(--color-logo);
+        @include media(tablet) {
+            font-size: to-rem(36px);
+            padding-left: to-rem(12px);
+
+            &:before {
+                width: to-rem(4px);
+            }
+        }
     }
 }

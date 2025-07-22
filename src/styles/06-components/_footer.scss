@@ -3,4 +3,54 @@
 
 .footer {
     width: 100%;
+    position: relative;
+
+    &__layout {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        position: relative;
+
+        &::after {
+            content: "";
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            border-top: to-rem(1px) solid var(--footer-border);
+        }
+    }
+
+    &__main {
+        background: var(--footer-main-bg);
+        color: var(--footer-main-fg);
+        width: 100%;
+        text-align: center;
+        padding: to-rem(24px 0);
+    }
+
+    &__main-link {
+        font-size: to-rem(16px);
+        color: var(--footer-main-fg);
+
+        &:hover {
+            color: var(--footer-main-fg);
+            text-decoration: underline;
+        }
+    }
+
+    &__copyright {
+        width: 100%;
+        text-align: center;
+        padding: to-rem(8px 0);
+        background: var(--footer-copyright-bg);
+        color: var(--footer-copyright-fg);
+    }
+
+    &__copyright-text {
+        font-size: to-rem(14px);
+        font-weight: 200;
+    }
 }

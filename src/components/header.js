@@ -1,4 +1,4 @@
-import logo from "@assets/images/logo-color-bars.svg";
+import logo from "@assets/images/logo-color.svg";
 
 export function createHeader() {
   const fragment = document.createRange().createContextualFragment(`
@@ -8,10 +8,10 @@ export function createHeader() {
         <span class="logo__text" aria-label="Tierra y Mesa">tierraymesa</span>
       </a>
       <div class="header__nav">
-        
+
       </div>
       <div class="header__actions">
-        
+
       </div>
     </div>  
   `);

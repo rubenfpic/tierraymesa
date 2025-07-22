@@ -1,6 +1,10 @@
 @use "@styles/settings/variables" as *;
 
 :root {
+    /***************/
+    /* Propiedades */
+    /***************/
+
     /* Logo */
     --color-logo: #{$color-terracotta}; /* Color del logo */
 
@@ -20,7 +24,23 @@
     /* Texto deshabilitado o muy tenue */
     --color-text-disabled: #{$color-gray-500};
 
+    --color-border-layout: #{$color-terracotta};
+
+    --color-footer-bg: #{$color-terracotta};
+    --color-footer-fg: #{$color-gray-100};
+
     /* Fondo */
     --background-color-body: #{$color-gray-500};
     --background-color-base: #{$color-background}; /* Beige claro */
+
+    /***************/
+    /* Componentes */
+    /***************/
+
+    /* Footer */
+    --footer-border: #{$color-secondary};
+    --footer-main-bg: #{$color-secondary-light};
+    --footer-main-fg: #{$color-secondary-dark};
+    --footer-copyright-bg: #{$color-secondary};
+    --footer-copyright-fg: #{$color-gray-100};
 }
