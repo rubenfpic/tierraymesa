@@ -1,0 +1,26 @@
+// 01-Settings
+@use "@styles/settings/breakpoints";
+@use "@styles/settings/fonts";
+@use "@styles/settings/tokens";
+@use "@styles/settings/variables";
+
+// 02-Tools
+@use "@styles/tools/mixins";
+@use "@styles/tools/functions";
+
+// 03-Generic
+@use "@styles/generic/reset";
+
+// 04-Elements
+@use "@styles/elements/elements";
+
+// 05-Objects
+@use "@styles/objects/containers";
+//
+// 06-Components
+@use "@styles/components/header";
+@use "@styles/components/logo";
+@use "@styles/components/footer";
+
+// 07-Trumps
+@use "@styles/trumps/utils";

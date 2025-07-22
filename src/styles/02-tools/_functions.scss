@@ -1,0 +1,22 @@
+@use "sass:math";
+@use "sass:list";
+@use "sass:meta";
+
+@function strip-unit($value) {
+    @return math.div($value, $value * 0 + 1);
+}
+
+@function to-rem($values, $base: 16px) {
+    $result: ();
+
+    @each $value in $values {
+        @if meta.type-of($value) == number and math.unit($value) == "px" {
+            $converted: math.div(strip-unit($value), strip-unit($base)) + rem;
+            $result: list.append($result, $converted);
+        } @else {
+            $result: list.append($result, $value);
+        }
+    }
+
+    @return $result;
+}

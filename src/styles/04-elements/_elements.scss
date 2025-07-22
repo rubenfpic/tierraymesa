@@ -1,0 +1,39 @@
+@use "@styles/settings/fonts";
+@use "@styles/settings/tokens";
+@use "@styles/tools/functions" as *;
+
+body {
+    font-family: "Sora variable", sans-serif;
+    color: var(--color-text-base);
+    background-color: var(--background-color-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 500;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: to-rem(30px);
+    line-height: to-rem(32px);
+}
+
+p {
+    font-weight: 300;
+    font-size: to-rem(20px);
+    line-height: to-rem(24px);
+}
+
+a {
+    color: var(--color-text-link);
+    text-decoration: none;
+
+    &:hover {
+        color: var(--color-text-link-hover);
+    }
+}

@@ -1,0 +1,32 @@
+@use "@styles/settings/tokens";
+@use "@styles/tools/mixins" as *;
+@use "@styles/tools/functions" as *;
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--color-logo);
+
+    &__img {
+        height: to-rem(36px);
+
+        @include media(tablet) {
+            height: to-rem(56px);
+        }
+    }
+
+    &__text {
+        font-weight: 500;
+        font-size: to-rem(36px);
+        margin-left: to-rem(8px);
+        position: relative;
+
+        @include media(tablet) {
+        }
+    }
+
+    &:hover {
+        color: var(--color-logo);
+    }
+}

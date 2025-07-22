@@ -1,15 +1,11 @@
-import "./style.css";
-import javascriptLogo from "./javascript.svg";
-import viteLogo from "/vite.svg";
+import "@styles/index.scss";
+import { createHeader } from "@components/header";
+import { createFooter } from "@components/footer";
 
-document.querySelector("#app").innerHTML = `
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Tierra y mesa</h1>
-  </div>
-`;
+const headerNode = document.getElementById("header");
+const headerContent = createHeader();
+headerNode.appendChild(headerContent);
+
+const footerNode = document.getElementById("footer");
+const footerContent = createFooter();
+footerNode.appendChild(footerContent);

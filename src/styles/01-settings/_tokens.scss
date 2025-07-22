@@ -1,0 +1,26 @@
+@use "@styles/settings/variables" as *;
+
+:root {
+    /* Logo */
+    --color-logo: #{$color-terracotta}; /* Color del logo */
+
+    /* Texto genérico (negro sobre fondo claro) */
+    --color-text-base: #{$color-gray-900}; /* Principal */
+    --color-text-muted: #{$color-gray-700}; /* Menos énfasis (descripciones) */
+    --color-text-inverted: #{$color-gray-100}; /* Para texto sobre fondos oscuros */
+
+    /* Títulos y encabezados */
+    --color-text-heading: var(--color-text-base);
+    --color-text-subheading: var(--color-text-muted);
+
+    /* Enlaces y acciones */
+    --color-text-link: #{$color-primary}; /* Color morado/uva, marca */
+    --color-text-link-hover: #{$color-primary-light}; /* Versión clara o hover */
+
+    /* Texto deshabilitado o muy tenue */
+    --color-text-disabled: #{$color-gray-500};
+
+    /* Fondo */
+    --background-color-body: #{$color-gray-500};
+    --background-color-base: #{$color-background}; /* Beige claro */
+}

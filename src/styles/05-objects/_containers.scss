@@ -1,0 +1,13 @@
+@use "@styles/settings/tokens";
+@use "@styles/tools/functions" as *;
+@use "@styles/tools/mixins" as *;
+
+.app {
+    width: 100%;
+    background-color: var(--background-color-base);
+
+    @include media(desktop) {
+        max-width: to-rem(1440px);
+        margin: 0 auto;
+    }
+}
