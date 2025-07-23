@@ -1,10 +1,13 @@
+@use "@styles/tools/functions" as *;
+
 /* Primary */
-$color-primary: #5c2a6b; /* Uva tinta */
 $color-primary-light: #a157a0; /* Uva clara */
+$color-primary: #5c2a6b; /* Uva tinta */
+$color-primary-dark: #3e1e4a; /* Uva intensa (para texto sobre el claro) */
 
 /* Secondary */
-$color-secondary: #4a752c; /* Verde hoja */
 $color-secondary-light: #a9c55b; /* Verde joven */
+$color-secondary: #4a752c; /* Verde hoja */
 $color-secondary-dark: #2e4d1a; /* Verde bosque */
 
 /* Accent */
@@ -21,10 +24,19 @@ $color-gray-900: #2c2c2c; /* Texto base */
 $color-gray-700: #505050; /* Texto secundario */
 $color-gray-500: #9b9b9b; /* Bordes suaves, iconos apagados */
 $color-gray-300: #d5d5d5; /* Líneas sutiles, fondos suaves */
+$color-gray-200: #e3e3e3; /* Fondo o borde sutil intermedio */
 $color-gray-100: #f1f1f1; /* Fondo alternativo claro */
 $color-white: #ffffff;
 
 /* Estados (opcional) */
-$color-text-success: #4a752c; /* Verde natural */
-$color-text-warning: #b27c12; /* Amarillo dorado */
-$color-text-error: #a63131; /* Rojo sobrio */
+$color-success: #4a752c;
+$color-success-hover: darken($color-success, 10%);
+$color-warning: #b27c12;
+$color-warning-hover: darken($color-warning, 10%);
+$color-danger: #a63131;
+$color-danger-hover: darken($color-danger, 10%);
+
+/* Sombras */
+$shadow-button: 0 to-rem(2px) to-rem(4px) rgba(0, 0, 0, 0.08);
+$shadow-button-hover: 0 to-rem(4px) to-rem(8px) rgba(0, 0, 0, 0.15);
+$shadow-button-disabled: 0 0 0 rgba(0, 0, 0, 0);

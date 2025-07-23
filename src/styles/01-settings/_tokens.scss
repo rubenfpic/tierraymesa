@@ -18,8 +18,8 @@
     --color-text-subheading: var(--color-text-muted);
 
     /* Enlaces y acciones */
-    --color-text-link: #{$color-primary}; /* Color morado/uva, marca */
-    --color-text-link-hover: #{$color-primary-light}; /* Versión clara o hover */
+    --color-link: #{$color-primary}; /* Color morado/uva, marca */
+    --color-link-hover: #{$color-primary-light}; /* Versión clara o hover */
 
     /* Texto deshabilitado o muy tenue */
     --color-text-disabled: #{$color-gray-500};
@@ -36,6 +36,18 @@
     /***************/
     /* Componentes */
     /***************/
+
+    /* Button */
+    --button-primary-fg: #{$color-gray-100};
+    --button-primary-bg: #{$color-primary};
+    --button-primary-bg-hover: #{$color-primary-dark};
+    --button-secondary-fg: #{$color-primary};
+    --button-secondary-fg-hover: #{$color-primary-dark};
+    --button-secondary-bg: #{$color-gray-100};
+    --button-secondary-bg-hover: #{$color-gray-200};
+    --button-danger-fg: #{$color-gray-100};
+    --button-danger-bg: #{$color-danger};
+    --button-danger-bg-hover: #{$color-danger-hover};
 
     /* Footer */
     --footer-border: #{$color-secondary};

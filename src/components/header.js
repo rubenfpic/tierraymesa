@@ -11,7 +11,12 @@ export function createHeader() {
 
       </div>
       <div class="header__actions">
-
+        <button type="button" class="button button--md button--primary">Primary</button>
+        <button type="button" class="button button--md button--secondary">Secondary</button>
+        <button type="button" class="button button--md button--link">Link</button>
+        <button type="button" class="button button--sm button--danger">sm</button>
+        <button type="button" class="button button--md button--danger">Danger</button>
+        <button type="button" class="button button--lg button--danger">lg</button>
       </div>
     </div>  
   `);

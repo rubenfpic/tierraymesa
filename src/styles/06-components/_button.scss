@@ -1,0 +1,83 @@
+@use "@styles/settings/tokens";
+@use "@styles/settings/variables" as *;
+@use "@styles/tools/functions" as *;
+
+.button {
+    font-weight: 500;
+    border-width: to-rem(2px);
+    border-style: solid;
+    border-radius: to-rem(6px);
+    transition: all 0.1s ease;
+    cursor: pointer;
+
+    &--sm {
+        font-size: to-rem(12px);
+        line-height: to-rem(16px);
+        padding: to-rem(4px 12px);
+    }
+
+    &--md {
+        font-size: to-rem(16px);
+        line-height: to-rem(20px);
+        padding: to-rem(8px 24px);
+    }
+
+    &--lg {
+        font-size: to-rem(20px);
+        line-height: to-rem(24px);
+        padding: to-rem(16px 48px);
+    }
+
+    &--primary {
+        border-color: var(--button-primary-bg);
+        background: var(--button-primary-bg);
+        color: var(--button-primary-fg);
+        box-shadow: #{$shadow-button};
+
+        &:hover {
+            border-color: var(--button-primary-bg-hover);
+            background: var(--button-primary-bg-hover);
+            box-shadow: $shadow-button-hover;
+        }
+    }
+
+    &--secondary {
+        border-color: var(--button-secondary-fg);
+        background: var(--button-secondary-bg);
+        color: var(--button-secondary-fg);
+        box-shadow: #{$shadow-button};
+
+        &:hover {
+            border-color: var(--button-secondary-fg-hover);
+            background: var(--button-secondary-bg-hover);
+            color: var(--button-secondary-fg-hover);
+            box-shadow: $shadow-button-hover;
+        }
+    }
+
+    &--danger {
+        border-color: var(--button-danger-bg);
+        background: var(--button-danger-bg);
+        color: var(--button-danger-fg);
+        box-shadow: #{$shadow-button};
+
+        &:hover {
+            border-color: var(--button-danger-bg-hover);
+            background: var(--button-danger-bg-hover);
+            box-shadow: $shadow-button-hover;
+        }
+    }
+
+    &--link {
+        background: transparent;
+        border-width: 0;
+        padding: to-rem(4px 8px);
+        border-radius: 0;
+        color: var(--color-link);
+
+        &:hover {
+            text-decoration: underline;
+            color: var(--color-link-hover);
+        }
+    }
+}
