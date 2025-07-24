@@ -4,8 +4,8 @@
 
 body {
     font-family: "Sora variable", sans-serif;
-    color: var(--color-text-base);
-    background-color: var(--background-color-body);
+    color: var(--body-fg);
+    background-color: var(--body-bg);
 }
 
 h1,
@@ -30,10 +30,10 @@ p {
 }
 
 a {
-    color: var(--color-text-link);
+    color: var(--color-link);
     text-decoration: none;
 
     &:hover {
-        color: var(--color-text-link-hover);
+        color: var(--color-link-hover);
     }
 }

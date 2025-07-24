@@ -1,3 +1,4 @@
+@use "sass:color";
 @use "@styles/tools/functions" as *;
 
 /* Primary */
@@ -16,7 +17,9 @@ $color-terracotta: #cc7351; /* Terracota elegante, opcional para CTA cálido */
 $color-mustard: #e5b94e; /* Mostaza cálida, para pequeños acentos */
 
 /* Background */
-$color-background: #f5f2e9; /* Beige claro */
+$color-surface: #f5f2e9; // fondo general del contenido
+$color-surface-light: #fafaf4; // secciones suaves o alternas
+$color-surface-dark: #ebe6d9; // pies o encabezados suaves
 
 /* Gray */
 $color-black: #000000;
@@ -28,13 +31,13 @@ $color-gray-200: #e3e3e3; /* Fondo o borde sutil intermedio */
 $color-gray-100: #f1f1f1; /* Fondo alternativo claro */
 $color-white: #ffffff;
 
-/* Estados (opcional) */
+/* Estados */
 $color-success: #4a752c;
-$color-success-hover: darken($color-success, 10%);
+$color-success-hover: color.adjust($color-success, $lightness: -10%);
 $color-warning: #b27c12;
-$color-warning-hover: darken($color-warning, 10%);
+$color-warning-hover: color.adjust($color-warning, $lightness: -10%);
 $color-danger: #a63131;
-$color-danger-hover: darken($color-danger, 10%);
+$color-danger-hover: color.adjust($color-danger, $lightness: -10%);
 
 /* Sombras */
 $shadow-button: 0 to-rem(2px) to-rem(4px) rgba(0, 0, 0, 0.08);

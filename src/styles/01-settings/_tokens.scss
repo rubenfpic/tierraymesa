@@ -21,21 +21,22 @@
     --color-link: #{$color-primary}; /* Color morado/uva, marca */
     --color-link-hover: #{$color-primary-light}; /* Versión clara o hover */
 
-    /* Texto deshabilitado o muy tenue */
-    --color-text-disabled: #{$color-gray-500};
-
-    --color-border-layout: #{$color-terracotta};
-
-    --color-footer-bg: #{$color-terracotta};
-    --color-footer-fg: #{$color-gray-100};
-
-    /* Fondo */
-    --background-color-body: #{$color-gray-500};
-    --background-color-base: #{$color-background}; /* Beige claro */
-
     /***************/
     /* Componentes */
     /***************/
+
+    /* Body (viewport) */
+    --body-bg: #{$color-gray-500};
+    --body-fg: var(--color-text-base);
+
+    /* App (interfaz) */
+    --app-bg: #{$color-surface-light};
+    --app-fg: var(--color-text-base);
+
+    /* Header */
+    --header-bg: #{$color-surface};
+    --header-fg: #{$color-gray-100};
+    --header-border: #{$color-terracotta};
 
     /* Button */
     --button-primary-fg: #{$color-gray-100};
@@ -48,6 +49,10 @@
     --button-danger-fg: #{$color-gray-100};
     --button-danger-bg: #{$color-danger};
     --button-danger-bg-hover: #{$color-danger-hover};
+
+    /* Intro */
+    --intro-title-fg: #{$color-primary};
+    --intro-subtitle-fg: #{$color-gray-700};
 
     /* Footer */
     --footer-border: #{$color-secondary};
