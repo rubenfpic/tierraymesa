@@ -1,0 +1,47 @@
+:root {
+    /* Primary */
+    --color-primary-light: #a157a0;
+    --color-primary: #5c2a6b;
+    --color-primary-dark: #3e1e4a;
+
+    /* Secondary */
+    --color-secondary-light: #a9c55b;
+    --color-secondary: #4a752c;
+    --color-secondary-dark: #2e4d1a;
+
+    /* Tertiary */
+    --color-tertiary-light: #f4e2d7;
+    --color-tertiary: #cc7351;
+    --color-tertiary-dark: #a9543e;
+
+    /* Background */
+    --color-surface: #f5f2e9;
+    --color-surface-light: #fafaf4;
+    --color-surface-dark: #ebe6d9;
+
+    /* Gray */
+    --color-white: #ffffff;
+    --color-gray-100: #f1f1f1;
+    --color-gray-200: #e3e3e3;
+    --color-gray-300: #d5d5d5;
+    --color-gray-400: #bfbfbf;
+    --color-gray-500: #9b9b9b;
+    --color-gray-600: #6d6d6d;
+    --color-gray-700: #505050;
+    --color-gray-800: #3b3b3b;
+    --color-gray-900: #2c2c2c;
+    --color-black: #000000;
+
+    /* States */
+    --color-success: #4a752c;
+    --color-success-hover: #3f6526;
+    --color-warning: #b27c12;
+    --color-warning-hover: #996a0f;
+    --color-danger: #a63131;
+    --color-danger-hover: #8f2a2a;
+
+    /* Shadows */
+    --color-shadow: rgba(0, 0, 0, 0.08);
+    --color-shadow-hover: rgba(0, 0, 0, 0.15);
+    --color-shadow-disabled: rgba(0, 0, 0, 0);
+}

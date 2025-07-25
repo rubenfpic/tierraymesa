@@ -10,6 +10,12 @@
     transition: all 0.1s ease;
     cursor: pointer;
 
+    &:disabled {
+        opacity: 0.5;
+        box-shadow: var(--button-shadow-disabled);
+        cursor: not-allowed;
+    }
+
     &--sm {
         font-size: to-rem(12px);
         line-height: to-rem(16px);
@@ -32,12 +38,12 @@
         border-color: var(--button-primary-bg);
         background: var(--button-primary-bg);
         color: var(--button-primary-fg);
-        box-shadow: #{$shadow-button};
+        box-shadow: var(--button-shadow);
 
         &:hover {
             border-color: var(--button-primary-bg-hover);
             background: var(--button-primary-bg-hover);
-            box-shadow: $shadow-button-hover;
+            box-shadow: var(--button-shadow-hover);
         }
     }
 
@@ -45,13 +51,13 @@
         border-color: var(--button-secondary-fg);
         background: var(--button-secondary-bg);
         color: var(--button-secondary-fg);
-        box-shadow: #{$shadow-button};
+        box-shadow: var(--button-shadow);
 
         &:hover {
             border-color: var(--button-secondary-fg-hover);
             background: var(--button-secondary-bg-hover);
             color: var(--button-secondary-fg-hover);
-            box-shadow: $shadow-button-hover;
+            box-shadow: var(--button-shadow-hover);
         }
     }
 
@@ -59,12 +65,12 @@
         border-color: var(--button-danger-bg);
         background: var(--button-danger-bg);
         color: var(--button-danger-fg);
-        box-shadow: #{$shadow-button};
+        box-shadow: var(--button-shadow);
 
         &:hover {
             border-color: var(--button-danger-bg-hover);
             background: var(--button-danger-bg-hover);
-            box-shadow: $shadow-button-hover;
+            box-shadow: var(--button-shadow-hover);
         }
     }
 

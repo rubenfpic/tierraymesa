@@ -1,8 +1,9 @@
 // 01-Settings
 @use "@styles/settings/breakpoints";
 @use "@styles/settings/fonts";
-@use "@styles/settings/tokens";
 @use "@styles/settings/variables";
+@use "@styles/settings/colors";
+@use "@styles/settings/tokens";
 
 // 02-Tools
 @use "@styles/tools/mixins";

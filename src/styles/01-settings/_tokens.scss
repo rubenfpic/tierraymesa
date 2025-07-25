@@ -6,58 +6,61 @@
     /***************/
 
     /* Logo */
-    --color-logo: #{$color-terracotta}; /* Color del logo */
+    --color-logo: var(--color-tertiary-dark); /* Color del logo */
 
     /* Texto genérico (negro sobre fondo claro) */
-    --color-text-base: #{$color-gray-900}; /* Principal */
-    --color-text-muted: #{$color-gray-700}; /* Menos énfasis (descripciones) */
-    --color-text-inverted: #{$color-gray-100}; /* Para texto sobre fondos oscuros */
+    --color-text-base: var(--color-gray-900);
+    --color-text-base-inverted: var(--color-gray-100);
+    --color-text-muted: var(--color-gray-700);
+    --color-text-muted-inverted: var(--color-gray-300);
+    --color-text-disabled: var(--color-gray-500);
+    --color-text-disabled-inverted: var(--color-gray-500);
 
     /* Títulos y encabezados */
-    --color-text-heading: var(--color-text-base);
-    --color-text-subheading: var(--color-text-muted);
+    // --color-text-heading: var(--color-text-base);
+    // --color-text-subheading: var(--color-text-muted);
 
     /* Enlaces y acciones */
-    --color-link: #{$color-primary}; /* Color morado/uva, marca */
-    --color-link-hover: #{$color-primary-light}; /* Versión clara o hover */
+    --color-link: var(--color-primary); /* Color morado/uva, marca */
+    --color-link-hover: var(--color-primary-light); /* Versión clara o hover */
 
     /***************/
     /* Componentes */
     /***************/
 
     /* Body (viewport) */
-    --body-bg: #{$color-gray-500};
+    --body-bg: var(--color-gray-500);
     --body-fg: var(--color-text-base);
 
     /* App (interfaz) */
-    --app-bg: #{$color-surface-light};
+    --app-bg: var(--color-surface-light);
     --app-fg: var(--color-text-base);
 
     /* Header */
-    --header-bg: #{$color-surface};
-    --header-fg: #{$color-gray-100};
-    --header-border: #{$color-terracotta};
+    --header-bg: var(--color-tertiary-light);
+    --header-fg: var(--color-gray-100);
+    --header-border: var(--color-tertiary-dark);
 
     /* Button */
-    --button-primary-fg: #{$color-gray-100};
-    --button-primary-bg: #{$color-primary};
-    --button-primary-bg-hover: #{$color-primary-dark};
-    --button-secondary-fg: #{$color-primary};
-    --button-secondary-fg-hover: #{$color-primary-dark};
-    --button-secondary-bg: #{$color-gray-100};
-    --button-secondary-bg-hover: #{$color-gray-200};
-    --button-danger-fg: #{$color-gray-100};
-    --button-danger-bg: #{$color-danger};
-    --button-danger-bg-hover: #{$color-danger-hover};
+    --button-primary-fg: var(--color-gray-100);
+    --button-primary-bg: var(--color-primary);
+    --button-primary-bg-hover: var(--color-primary-dark);
+    --button-secondary-fg: var(--color-primary);
+    --button-secondary-fg-hover: var(--color-primary-dark);
+    --button-secondary-bg: var(--color-gray-100);
+    --button-secondary-bg-hover: var(--color-gray-200);
+    --button-danger-fg: var(--color-gray-100);
+    --button-danger-bg: var(--color-danger);
+    --button-danger-bg-hover: var(--color-danger-hover);
 
     /* Intro */
-    --intro-title-fg: #{$color-primary};
-    --intro-subtitle-fg: #{$color-gray-700};
+    --intro-title-fg: var(--color-primary);
+    --intro-subtitle-fg: var(--color-gray-700);
 
     /* Footer */
-    --footer-border: #{$color-secondary};
-    --footer-main-bg: #{$color-secondary-light};
-    --footer-main-fg: #{$color-secondary-dark};
-    --footer-copyright-bg: #{$color-secondary};
-    --footer-copyright-fg: #{$color-gray-100};
+    --footer-border: var(--color-secondary);
+    --footer-main-bg: var(--color-secondary-light);
+    --footer-main-fg: var(--color-secondary-dark);
+    --footer-copyright-bg: var(--color-secondary);
+    --footer-copyright-fg: var(--color-gray-100);
 }

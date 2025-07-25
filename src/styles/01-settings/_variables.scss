@@ -1,45 +1,19 @@
 @use "sass:color";
+@use "@styles/settings/colors" as *;
 @use "@styles/tools/functions" as *;
 
-/* Primary */
-$color-primary-light: #a157a0; /* Uva clara */
-$color-primary: #5c2a6b; /* Uva tinta */
-$color-primary-dark: #3e1e4a; /* Uva intensa (para texto sobre el claro) */
+$shadow-offset-x: 0;
+$shadow-offset-y: to-rem(2px);
+$shadow-blur: to-rem(4px);
 
-/* Secondary */
-$color-secondary-light: #a9c55b; /* Verde joven */
-$color-secondary: #4a752c; /* Verde hoja */
-$color-secondary-dark: #2e4d1a; /* Verde bosque */
+$shadow-hover-offset-y: to-rem(4px);
+$shadow-hover-blur: to-rem(8px);
 
-/* Accent */
-$color-wood: #6b5e3d; /* Marrón madera */
-$color-terracotta: #cc7351; /* Terracota elegante, opcional para CTA cálido */
-$color-mustard: #e5b94e; /* Mostaza cálida, para pequeños acentos */
+$shadow-disabled-offset-y: 0;
+$shadow-disabled-blur: 0;
 
-/* Background */
-$color-surface: #f5f2e9; // fondo general del contenido
-$color-surface-light: #fafaf4; // secciones suaves o alternas
-$color-surface-dark: #ebe6d9; // pies o encabezados suaves
-
-/* Gray */
-$color-black: #000000;
-$color-gray-900: #2c2c2c; /* Texto base */
-$color-gray-700: #505050; /* Texto secundario */
-$color-gray-500: #9b9b9b; /* Bordes suaves, iconos apagados */
-$color-gray-300: #d5d5d5; /* Líneas sutiles, fondos suaves */
-$color-gray-200: #e3e3e3; /* Fondo o borde sutil intermedio */
-$color-gray-100: #f1f1f1; /* Fondo alternativo claro */
-$color-white: #ffffff;
-
-/* Estados */
-$color-success: #4a752c;
-$color-success-hover: color.adjust($color-success, $lightness: -10%);
-$color-warning: #b27c12;
-$color-warning-hover: color.adjust($color-warning, $lightness: -10%);
-$color-danger: #a63131;
-$color-danger-hover: color.adjust($color-danger, $lightness: -10%);
-
-/* Sombras */
-$shadow-button: 0 to-rem(2px) to-rem(4px) rgba(0, 0, 0, 0.08);
-$shadow-button-hover: 0 to-rem(4px) to-rem(8px) rgba(0, 0, 0, 0.15);
-$shadow-button-disabled: 0 0 0 rgba(0, 0, 0, 0);
+:root {
+    --button-shadow: 0 #{$shadow-offset-y} #{$shadow-blur} var(--color-shadow);
+    --button-shadow-hover: 0 #{$shadow-hover-offset-y} #{$shadow-hover-blur} var(--color-shadow-hover);
+    --button-shadow-disabled: 0 #{$shadow-disabled-offset-y} #{$shadow-disabled-blur} var(--color-shadow-disabled);
+}
