@@ -1,0 +1,48 @@
+@use "@styles/settings/tokens";
+@use "@styles/settings/variables" as *;
+@use "@styles/tools/functions" as *;
+@use "@styles/tools/mixins" as *;
+
+.popover {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    text-align: initial;
+    overflow: hidden;
+    z-index: 40;
+    color: var(--popover-fg);
+    background: var(--popover-bg);
+
+    @include media(tablet) {
+        position: absolute;
+        top: to-rem(32px);
+        left: 0;
+        width: to-rem(320px);
+        height: auto;
+        border-radius: $border-overlay-radius;
+        border: $border-overlay-width solid var(--popover-border-color);
+        box-shadow: var(--shadow-overlay);
+        padding: to-rem(14px 20px);
+    }
+
+    &.is-visible {
+        display: block;
+    }
+
+    &__close {
+        position: absolute;
+        right: to-rem(4px);
+        top: to-rem(4px);
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        color: var(--color-icon-base);
+
+        &:hover {
+            color: var(--color-icon-hover);
+        }
+    }
+}

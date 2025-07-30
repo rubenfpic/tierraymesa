@@ -19,6 +19,10 @@
     --color-surface-light: #fafaf4;
     --color-surface-dark: #ebe6d9;
 
+    --color-surface-border: #e4dfd0; /* ~ para --color-surface (#f5f2e9) */
+    --color-surface-border-light: #eceae0; /* ~ para --color-surface-light (#fafaf4) */
+    --color-surface-border-dark: #d7d1c3; /* ~ para --color-surface-dark (#ebe6d9) */
+
     /* Gray */
     --color-white: #ffffff;
     --color-gray-100: #f1f1f1;
@@ -44,4 +48,5 @@
     --color-shadow: rgba(0, 0, 0, 0.08);
     --color-shadow-hover: rgba(0, 0, 0, 0.15);
     --color-shadow-disabled: rgba(0, 0, 0, 0);
+    --color-shadow-overlay: rgba(0, 0, 0, 0.2);
 }

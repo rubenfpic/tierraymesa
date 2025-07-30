@@ -1,0 +1,15 @@
+@use "@styles/tools/functions" as *;
+
+.icon {
+    display: block;
+
+    &--16 {
+        width: to-rem(16px);
+        height: to-rem(16px);
+    }
+
+    &--24 {
+        width: to-rem(24px);
+        height: to-rem(24px);
+    }
+}

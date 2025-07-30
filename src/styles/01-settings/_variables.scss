@@ -5,15 +5,19 @@
 $shadow-offset-x: 0;
 $shadow-offset-y: to-rem(2px);
 $shadow-blur: to-rem(4px);
-
 $shadow-hover-offset-y: to-rem(4px);
 $shadow-hover-blur: to-rem(8px);
-
 $shadow-disabled-offset-y: 0;
 $shadow-disabled-blur: 0;
+$shadow-overlay-offset-y: to-rem(2px);
+$shadow-overlay-blur: to-rem(8px);
+
+$border-overlay-width: to-rem(1px);
+$border-overlay-radius: to-rem(8px);
 
 :root {
-    --button-shadow: 0 #{$shadow-offset-y} #{$shadow-blur} var(--color-shadow);
-    --button-shadow-hover: 0 #{$shadow-hover-offset-y} #{$shadow-hover-blur} var(--color-shadow-hover);
-    --button-shadow-disabled: 0 #{$shadow-disabled-offset-y} #{$shadow-disabled-blur} var(--color-shadow-disabled);
+    --shadow: 0 #{$shadow-offset-y} #{$shadow-blur} var(--color-shadow);
+    --shadow-hover: 0 #{$shadow-hover-offset-y} #{$shadow-hover-blur} var(--color-shadow-hover);
+    --shadow-disabled: 0 #{$shadow-disabled-offset-y} #{$shadow-disabled-blur} var(--color-shadow-disabled);
+    --shadow-overlay: 0 #{$shadow-overlay-offset-y} #{$shadow-overlay-blur} var(--color-shadow-overlay);
 }

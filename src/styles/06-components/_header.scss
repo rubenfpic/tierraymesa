@@ -14,7 +14,7 @@
             position: absolute;
             left: 0;
             bottom: 0;
-            border-bottom: to-rem(1px) solid var(--header-border);
+            border-bottom: to-rem(1px) solid var(--header-border-color);
         }
 
         @include media(mobile) {

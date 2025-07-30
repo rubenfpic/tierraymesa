@@ -20,6 +20,10 @@
     // --color-text-heading: var(--color-text-base);
     // --color-text-subheading: var(--color-text-muted);
 
+    /* Icons */
+    --color-icon: var(--color-text-base);
+    --color-icon-hover: var(--color-text-muted);
+
     /* Enlaces y acciones */
     --color-link: var(--color-primary); /* Color morado/uva, marca */
     --color-link-hover: var(--color-primary-light); /* Versión clara o hover */
@@ -39,7 +43,7 @@
     /* Header */
     --header-bg: var(--color-tertiary-light);
     --header-fg: var(--color-gray-100);
-    --header-border: var(--color-tertiary-dark);
+    --header-border-color: var(--color-tertiary-dark);
 
     /* Button */
     --button-primary-fg: var(--color-gray-100);
@@ -57,8 +61,13 @@
     --intro-title-fg: var(--color-primary);
     --intro-subtitle-fg: var(--color-gray-700);
 
+    /* Popover */
+    --popover-bg: var(--color-surface);
+    --popover-fg: var(--color-text-base);
+    --popover-border-color: var(--color-surface-border);
+
     /* Footer */
-    --footer-border: var(--color-secondary);
+    --footer-border-color: var(--color-secondary);
     --footer-main-bg: var(--color-secondary-light);
     --footer-main-fg: var(--color-secondary-dark);
     --footer-copyright-bg: var(--color-secondary);
