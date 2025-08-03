@@ -12,4 +12,8 @@
         width: to-rem(24px);
         height: to-rem(24px);
     }
+
+    &--90deg {
+        transform: rotate(90deg);
+    }
 }

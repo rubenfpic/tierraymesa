@@ -55,7 +55,10 @@ export const cardsData = [
       "Disfruta de una estancia acogedora en alojamientos rurales con encanto.",
     days: "4",
     includes: ["Alojamiento 2 noches", "Desayuno incluido", "WiFi y amenities"],
-    extras: [{ label: "Media pensión", price: "20 €" }],
+    extras: [
+      { label: "Media pensión", price: "20 €" },
+      { label: "Pensión completa", price: "35 €" },
+    ],
     priceFrom: "107 €",
     priceBeforeTaxes: "118 €",
     taxes: "12 €",

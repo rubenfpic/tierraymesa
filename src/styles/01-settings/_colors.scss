@@ -19,9 +19,15 @@
     --color-surface-light: #fafaf4;
     --color-surface-dark: #ebe6d9;
 
-    --color-surface-border: #e4dfd0; /* ~ para --color-surface (#f5f2e9) */
-    --color-surface-border-light: #eceae0; /* ~ para --color-surface-light (#fafaf4) */
-    --color-surface-border-dark: #d7d1c3; /* ~ para --color-surface-dark (#ebe6d9) */
+    --color-surface-border: #e4dfd0;
+    --color-surface-border-light: #eceae0;
+    --color-surface-border-dark: #d7d1c3;
+
+    /* Shadows */
+    --color-shadow: rgba(0, 0, 0, 0.08);
+    --color-shadow-hover: rgba(0, 0, 0, 0.15);
+    --color-shadow-disabled: rgba(0, 0, 0, 0);
+    --color-shadow-overlay: rgba(0, 0, 0, 0.2);
 
     /* Gray */
     --color-white: #ffffff;
@@ -43,10 +49,4 @@
     --color-warning-hover: #996a0f;
     --color-danger: #a63131;
     --color-danger-hover: #8f2a2a;
-
-    /* Shadows */
-    --color-shadow: rgba(0, 0, 0, 0.08);
-    --color-shadow-hover: rgba(0, 0, 0, 0.15);
-    --color-shadow-disabled: rgba(0, 0, 0, 0);
-    --color-shadow-overlay: rgba(0, 0, 0, 0.2);
 }

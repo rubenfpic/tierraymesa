@@ -61,10 +61,19 @@
     --intro-title-fg: var(--color-primary);
     --intro-subtitle-fg: var(--color-gray-700);
 
+    /* Card */
+    --card-tag-fg: var(--color-tertiary-light);
+    --card-tag-bg: var(--color-tertiary-dark);
+    --card-body-bg: var(--color-surface);
+    --card-footer-bg: linear-gradient(to bottom, var(--color-surface), var(--color-surface-dark));
+
     /* Popover */
     --popover-bg: var(--color-surface);
     --popover-fg: var(--color-text-base);
     --popover-border-color: var(--color-surface-border);
+
+    /* Summary */
+    --summary-border-color: var(--color-surface-border);
 
     /* Footer */
     --footer-border-color: var(--color-secondary);
