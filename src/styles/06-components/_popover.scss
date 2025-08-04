@@ -15,17 +15,18 @@
     z-index: 40;
     color: var(--popover-fg);
     background: var(--popover-bg);
+    padding: to-rem(20px 16px 16px);
 
     @include media(tablet) {
         position: absolute;
-        top: to-rem(32px);
-        left: 0;
+        top: to-rem(20px);
+        left: to-rem(-4px);
         width: to-rem(320px);
         height: auto;
         border-radius: $border-overlay-radius;
         border: $border-overlay-width solid var(--popover-border-color);
         box-shadow: var(--shadow-overlay);
-        padding: to-rem(14px 20px);
+        padding: to-rem(20px 12px 12px);
     }
 
     &.is-visible {
@@ -34,7 +35,7 @@
 
     &__close {
         position: absolute;
-        right: to-rem(4px);
+        right: to-rem(2px);
         top: to-rem(4px);
         background: transparent;
         border: none;

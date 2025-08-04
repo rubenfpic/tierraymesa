@@ -25,7 +25,7 @@ export function createCard({
 }) {
   const summaryContent = `
     <div class="summary">
-        <h3 class="summary__title">${destination} (${region})</h3>
+        <h3 class="summary__title"><strong>${destination}</strong> (${region})</h3>
         <p class="summary__info"><span class="u-capitalize">${experience}</span>, ${days} días</p>
         <dl class="summary__list">
             <dt class="summary__term">Precio antes de impuestos</dt>
