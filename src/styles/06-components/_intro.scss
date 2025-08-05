@@ -13,12 +13,12 @@
     }
 
     @include media(laptop) {
-        margin: to-rem(56px auto 48px);
+        margin: to-rem(48px auto 36px);
         width: to-rem(840px);
     }
 
     @include media(desktop) {
-        margin: to-rem(72px auto);
+        margin: to-rem(56px auto);
         max-width: to-rem(1128px);
     }
 

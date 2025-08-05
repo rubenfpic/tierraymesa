@@ -1,8 +1,4 @@
-import {
-  createPopover,
-  openPopover,
-  closePopovers,
-} from "@components/popover.js";
+import { createPopover, openPopover, closePopovers } from "@components/popover";
 
 export function createCard({
   id,
@@ -80,7 +76,7 @@ export function createCard({
         <span class="card__price-label">Desde</span>
         <strong class="card__price-value">${priceFrom}</strong>
         <div class="card__show-details">
-          <button type="button" class="button button--link u-p-0 js-details-show" aria-expanded="false" aria-controls="popover-${id}">
+          <button type="button" class="button button--link u-p-0 js-card-details-trigger" aria-expanded="false" aria-controls="popover-${id}">
             Ver detalles
           </button>
           <svg class="icon icon--16 icon--90deg" aria-hidden="true">
@@ -92,21 +88,4 @@ export function createCard({
       </div>
     </article>
   `;
-}
-
-export function showCardDetails() {
-  const detailsShow = document.querySelectorAll(".js-details-show");
-
-  detailsShow.forEach((el) => {
-    // el.setAttribute("aria-expanded", false);
-    el.addEventListener("click", () => {
-      closePopovers();
-      openPopover(el, document.querySelector(".js-cards"));
-      el.setAttribute("aria-expanded", true);
-    });
-  });
-
-  window.addEventListener("resize", () => {
-    closePopovers();
-  });
 }

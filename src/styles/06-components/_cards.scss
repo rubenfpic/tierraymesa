@@ -1,0 +1,48 @@
+@use "../02-tools/functions" as *;
+@use "../02-tools/mixins" as *;
+
+.cards {
+    &__layout {
+        display: flex;
+        flex-direction: column;
+        gap: to-rem(24px);
+        padding-bottom: to-rem(56px);
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: to-rem(24px);
+        padding-bottom: to-rem(8px);
+        width: auto;
+
+        &.is-hidden {
+            display: none;
+        }
+    }
+
+    &__title {
+        width: 100%;
+        padding: to-rem(0 16px);
+        font-weight: 600;
+        font-size: to-rem(22px);
+        line-height: to-rem(24px);
+        margin-bottom: to-rem(-8px);
+    }
+
+    &__item {
+        width: 100%;
+        text-align: center;
+
+        @include media(tablet) {
+            max-width: to-rem(264px);
+            min-height: to-rem(376px);
+        }
+
+        &.is-hidden {
+            display: none;
+        }
+    }
+}
