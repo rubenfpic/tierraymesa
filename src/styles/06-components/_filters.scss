@@ -1,5 +1,82 @@
+@use "@styles/settings/variables" as *;
 @use "@styles/tools/functions" as *;
 @use "@styles/tools/mixins" as *;
 
 .filters {
+    &__layout {
+        text-align: center;
+    }
+
+    &__panel {
+        display: none;
+        background-color: var(--filters-panel-bg);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        z-index: 70;
+
+        @include media(tablet) {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: to-rem(296px);
+            height: 100%;
+            box-shadow: var(--shadow-overlay);
+            z-index: 50;
+        }
+
+        @include media(desktop) {
+            display: block;
+            box-shadow: none;
+            position: relative;
+            width: to-rem(264px);
+            border-radius: $border-overlay-radius;
+        }
+
+        &.is-visible {
+            display: block;
+        }
+    }
+
+    &__panel-inner {
+        height: 100%;
+        overflow-y: auto;
+    }
+
+    &__toggle {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        @include media(tablet) {
+            justify-content: flex-start;
+        }
+
+        @include media(desktop) {
+            display: none;
+        }
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: to-rem(16px 20px);
+        border-bottom: to-rem(1px) solid var(--filters-panel-border);
+
+        @include media(desktop) {
+            text-align: center;
+        }
+    }
+
+    &__close {
+        @include media(desktop) {
+            display: none;
+        }
+    }
 }

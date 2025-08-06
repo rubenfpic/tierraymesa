@@ -28,4 +28,8 @@
         <path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
     </symbol>
 
+    <symbol id="filter" viewBox="0 0 24 24" fill="none">
+        <path d="M4 4L9 12V18L15 21V12L20 4H4Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+    </symbol>
+
 </svg>

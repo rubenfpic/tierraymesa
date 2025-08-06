@@ -61,6 +61,19 @@
         }
     }
 
+    &--tertiary {
+        border-color: var(--button-tertiary-bg);
+        background: var(--button-tertiary-bg);
+        color: var(--button-tertiary-fg);
+        box-shadow: var(--button-shadow);
+
+        &:hover {
+            border-color: var(--button-tertiary-bg-hover);
+            background: var(--button-tertiary-bg-hover);
+            box-shadow: var(--button-shadow-hover);
+        }
+    }
+
     &--danger {
         border-color: var(--button-danger-bg);
         background: var(--button-danger-bg);
@@ -85,5 +98,13 @@
             text-decoration: underline;
             color: var(--color-link-hover);
         }
+    }
+
+    &--icon {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: to-rem(10px);
     }
 }

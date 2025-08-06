@@ -51,8 +51,11 @@
     --button-primary-bg-hover: var(--color-primary-dark);
     --button-secondary-fg: var(--color-primary);
     --button-secondary-fg-hover: var(--color-primary-dark);
-    --button-secondary-bg: var(--color-gray-100);
-    --button-secondary-bg-hover: var(--color-gray-200);
+    --button-secondary-bg: var(--color-surface-light);
+    --button-secondary-bg-hover: var(--color-surface);
+    --button-tertiary-fg: var(--color-gray-100);
+    --button-tertiary-bg: var(--color-tertiary);
+    --button-tertiary-bg-hover: var(--color-tertiary-dark);
     --button-danger-fg: var(--color-gray-100);
     --button-danger-bg: var(--color-danger);
     --button-danger-bg-hover: var(--color-danger-hover);
@@ -74,6 +77,11 @@
 
     /* Summary */
     --summary-border-color: var(--color-surface-border);
+
+    /* Filters */
+    --filters-panel-bg: var(--color-surface-dark);
+    --filters-panel-border: var(--color-surface-border-dark);
+    --filters-panel-shadow: var(--color-shadow);
 
     /* Footer */
     --footer-border-color: var(--color-secondary);
