@@ -1,0 +1,46 @@
+@use "@styles/tools/functions" as *;
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    font-weight: 300;
+    font-size: to-rem(12px);
+    line-height: to-rem(16px);
+    text-align: center;
+
+    &__text {
+        position: absolute;
+        z-index: 1;
+        visibility: hidden;
+        left: 50%;
+        bottom: 100%;
+        transform: translateX(-50%);
+        width: auto;
+        min-width: to-rem(100px);
+        max-width: to-rem(200px);
+        background: var(--tooltip-bg);
+        color: var(--tooltip-fg);
+        text-align: center;
+        padding: to-rem(6px 8px);
+        border-radius: to-rem(4px);
+        border: to-rem(1px) solid var(--tooltip-border-color);
+        box-shadow: var(--shadow-overlay);
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: to-rem(8px);
+            border-style: solid;
+            border-color: var(--tooltip-bg) transparent transparent transparent;
+        }
+    }
+
+    &:hover {
+        .tooltip__text {
+            visibility: visible;
+        }
+    }
+}
