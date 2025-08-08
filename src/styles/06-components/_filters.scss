@@ -67,7 +67,7 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        padding: to-rem(12px 16px);
+        padding: to-rem(16px 16px);
         border-bottom: to-rem(1px) solid var(--filters-panel-border);
 
         @include media(desktop) {
@@ -85,7 +85,7 @@
         text-align: left;
         border: none;
         position: relative;
-        padding: to-rem(48px 12px 12px 12px);
+        padding: to-rem(48px 12px 8px 12px);
 
         &.is-collapsed {
             padding-bottom: to-rem(0);
@@ -101,6 +101,10 @@
             .filters__legend-expander {
                 transform: rotate(0deg);
             }
+        }
+
+        &:not(:last-child) {
+            border-bottom: to-rem(1px) solid var(--filters-panel-border);
         }
     }
 
