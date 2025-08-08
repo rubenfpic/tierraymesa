@@ -1,0 +1,100 @@
+@use "@styles/tools/functions" as *;
+
+.input-wrapper,
+.checkbox-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+
+    padding: to-rem(12px 0);
+
+    &.is-hidden {
+        display: none;
+    }
+
+    &__icon {
+        width: to-rem(24px);
+        height: to-rem(24px);
+        position: absolute;
+        left: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--form-text-input-text-default);
+        color: red;
+    }
+}
+
+.checkbox-wrapper label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: to-rem(8px);
+}
+
+.input {
+    &[type="text"] {
+        width: 100%;
+        min-height: to-rem(48px);
+        max-height: to-rem(48px);
+        padding-top: to-rem(12px);
+        padding-bottom: to-rem(12px);
+        border-radius: to-rem(208px);
+        border: 1px solid var(--form-text-input-border-default);
+        background-color: var(--form-text-input-background-default);
+        color: var(--form-text-input-text-default);
+
+        &::placeholder {
+            color: var(--form-text-input-placeholder-default);
+            margin-left: 2rem;
+            display: inline-block;
+            font-weight: 500;
+            font-size: to-rem(14px);
+            line-height: to-rem(20px);
+        }
+    }
+
+    &[type="checkbox"] {
+        display: inline-block;
+        position: relative;
+        appearance: none;
+        width: to-rem(18px);
+        height: to-rem(18px);
+        border: to-rem(1px) solid var(--input-border);
+        background-color: var(--input-bg);
+        border-radius: to-rem(2px);
+        cursor: pointer;
+        vertical-align: middle;
+
+        &:checked {
+            &::after {
+                content: "";
+                position: absolute;
+                left: to-rem(5px);
+                top: to-rem(1px);
+                width: to-rem(6px);
+                height: to-rem(12px);
+                border-style: solid;
+                border-color: var(--input-fg);
+                border-width: to-rem(0 3px 3px 0);
+                transform: rotate(45deg);
+            }
+        }
+
+        &:hover {
+            background-color: var(--input-bg-hover);
+            border-color: var(--input-border-hover);
+
+            &:checked {
+                &::after {
+                    border-color: var(--input-fg-hover);
+                }
+            }
+        }
+    }
+
+    &--icon {
+        padding-left: to-rem(52px);
+    }
+}

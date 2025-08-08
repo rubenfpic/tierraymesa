@@ -62,7 +62,7 @@ export function createCard({
   `;
 
   return `
-    <article class="card js-card" data-experience="${experience}">
+    <article class="card js-card" data-experience="${experience}" data-region="${region}" data-id="${id}">
       <div class="card__header">
         <img class="card__image" src="/src/assets/images/content/${image}" alt="Imagen de ${experience} en ${destination}" />
         ${tag ? `<span class="card__tag">${tag}</span>` : ""}

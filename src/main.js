@@ -2,8 +2,18 @@ import "@styles/index.scss";
 import { createHeader } from "@components/header";
 import { createFooter } from "@components/footer";
 import { createIntro } from "@components/intro";
-import { createFilters, toggleFiltersPanel } from "@components/filters";
-import { createCards, initCardDetails } from "@components/cards";
+import {
+  createFilters,
+  toggleFiltersPanel,
+  toggleFiltersFieldset,
+  toggleFiltersList,
+  activateCheckboxFilter,
+} from "@components/filters";
+import { createCards, updateCards, initCardDetails } from "@components/cards";
+
+function onFilterChange(filteredCards) {
+  updateCards(filteredCards);
+}
 
 const headerNode = document.getElementById("header");
 const headerContent = createHeader();
@@ -17,6 +27,8 @@ const filtersNode = document.getElementById("filters");
 const filtersContent = createFilters();
 filtersNode.appendChild(filtersContent);
 toggleFiltersPanel();
+toggleFiltersFieldset();
+toggleFiltersList();
 
 const cardsNode = document.getElementById("cards");
 const cardsContent = createCards();
@@ -26,3 +38,6 @@ initCardDetails();
 const footerNode = document.getElementById("footer");
 const footerContent = createFooter();
 footerNode.appendChild(footerContent);
+
+activateCheckboxFilter("region", onFilterChange);
+activateCheckboxFilter("experience", onFilterChange);

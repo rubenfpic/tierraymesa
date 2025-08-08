@@ -13,6 +13,11 @@
         height: to-rem(24px);
     }
 
+    &--32 {
+        width: to-rem(32px);
+        height: to-rem(32px);
+    }
+
     &--90deg {
         transform: rotate(90deg);
     }

@@ -75,6 +75,11 @@
     --popover-fg: var(--color-text-base);
     --popover-border-color: var(--color-surface-border);
 
+    /* Tooltip */
+    --tooltip-bg: var(--color-tertiary);
+    --tooltip-fg: var(--color-surface);
+    --tooltip-border-color: var(--color-tertiary);
+
     /* Summary */
     --summary-border-color: var(--color-surface-border);
 
@@ -82,6 +87,18 @@
     --filters-panel-bg: var(--color-surface-dark);
     --filters-panel-border: var(--color-surface-border-dark);
     --filters-panel-shadow: var(--color-shadow);
+
+    /* Form */
+    --form-legend-fg: var(--color-primary);
+    --form-legend-fg-hover: var(--color-primary-light);
+
+    /* Input */
+    --input-fg: var(--color-primary);
+    --input-fg-hover: var(--color-primary-dark);
+    --input-bg: var(--color-surface-light);
+    --input-bg-hover: var(--color-surface);
+    --input-border: var(--color-primary);
+    --input-border-hover: var(--color-primary-dark);
 
     /* Footer */
     --footer-border-color: var(--color-secondary);
