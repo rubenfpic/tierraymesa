@@ -80,7 +80,7 @@ export function createCard({
             Ver detalles
           </button>
           <svg class="icon icon--16 icon--90deg" aria-hidden="true">
-            <use xlink:href="/public/sprite.svg#chevron"></use>
+            <use xlink:href="/sprite.svg#chevron"></use>
           </svg>
           ${createPopover(id, summaryContent)}
         </div>        
