@@ -21,43 +21,42 @@ export function createCard({
 }) {
   const summaryContent = `
     <div class="summary">
-        <h3 class="summary__title"><strong>${destination}</strong> (${region})</h3>
-        <p class="summary__info"><span class="u-capitalize">${experience}</span>, ${days} días</p>
-        <dl class="summary__list">
-            <dt class="summary__term">Precio antes de impuestos</dt>
-            <dd class="summary__description">${priceBeforeTaxes}</dd>
-            <dt class="summary__term">Impuestos</dt>
-            <dd class="summary__description">${taxes}</dd>
-        </dl>
-        ${
-          includes.length > 0
-            ? `<dl class="summary__list">
-                    <dt class="summary__term">Incluye</dt>
-                    <dd class="summary__description">${includes
-                      .map((item) => `${item}<br>`)
-                      .join("")}</dd>
-                </dl>`
-            : ""
-        }
-        <dl class="summary__list">
-            <dt class="summary__term"><strong>Precio </strong></dt>
-            <dd class="summary__description"><strong>${finalPrice}</strong></dd>
-        </dl>
-        ${
-          extras.length > 0
-            ? '<dl class="summary__list">' +
-              extras
-                .map(
-                  (item) => `
-                            <dt class="summary__term">${item.label}</dt>
-                            <dd class="summary__description">+ ${item.price}</dd>
-                            `
-                )
-                .join("") +
-              "</dl>"
-            : ""
-        }
-
+      <h4 class="summary__title"><strong>${destination}</strong> (${region})</h4>
+      <p class="summary__info"><span class="u-capitalize">${experience}</span>, ${days} días</p>
+      <dl class="summary__list">
+        <dt class="summary__term">Precio antes de impuestos</dt>
+        <dd class="summary__description">${priceBeforeTaxes}</dd>
+        <dt class="summary__term">Impuestos</dt>
+        <dd class="summary__description">${taxes}</dd>
+      </dl>
+      ${
+        includes.length > 0
+          ? `<dl class="summary__list">
+              <dt class="summary__term">Incluye</dt>
+              <dd class="summary__description">${includes
+                .map((item) => `${item}<br>`)
+                .join("")}</dd>
+              </dl>`
+          : ""
+      }
+      <dl class="summary__list">
+        <dt class="summary__term"><strong>Precio </strong></dt>
+        <dd class="summary__description"><strong>${finalPrice}</strong></dd>
+      </dl>
+      ${
+        extras.length > 0
+          ? '<dl class="summary__list">' +
+            extras
+              .map(
+                (item) => `
+                  <dt class="summary__term">${item.label}</dt>
+                  <dd class="summary__description">+ ${item.price}</dd>
+                `
+              )
+              .join("") +
+            "</dl>"
+          : ""
+      }
     </div>
   `;
 

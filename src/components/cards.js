@@ -63,7 +63,6 @@ export function initCardDetails() {
     el.addEventListener("click", () => {
       closePopovers();
       openPopover(el, document.querySelector(".js-cards"));
-      el.setAttribute("aria-expanded", true);
     });
   });
 
