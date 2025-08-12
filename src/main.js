@@ -9,6 +9,7 @@ import {
   toggleFiltersList,
   activateCheckboxFilter,
 } from "@components/filters";
+import { closePopovers } from "./components/popover";
 import { createCards, updateCards, initCardDetails } from "@components/cards";
 
 function onFilterChange(filteredCards) {
@@ -38,6 +39,8 @@ initCardDetails();
 const footerNode = document.getElementById("footer");
 const footerContent = createFooter();
 footerNode.appendChild(footerContent);
+
+window.addEventListener("resize", closePopovers);
 
 activateCheckboxFilter("region", onFilterChange);
 activateCheckboxFilter("experience", onFilterChange);

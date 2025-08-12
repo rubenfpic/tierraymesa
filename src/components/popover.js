@@ -1,6 +1,6 @@
 let lastTrigger = null;
 let keydownHandler = null;
-let outsideClickHandler = null;
+let popoverClickHandler = null;
 
 /**
  * Obtiene todos los elementos focusables dentro de un contenedor.
@@ -46,7 +46,7 @@ export function createPopover(id, popoverContent) {
 }
 
 /**
- * Cierra popovers visibles, limpiar eventos y devolver el foco al trigger original.
+ * Cierra popovers visibles, limpia eventos y devuelve el foco al trigger original.
  */
 export function closePopovers() {
   // 1 - Ocultar los popovers visibles, resetear aria-expanded, y desbloquear el body
@@ -64,9 +64,9 @@ export function closePopovers() {
     document.removeEventListener("keydown", keydownHandler);
     keydownHandler = null;
   }
-  if (outsideClickHandler) {
-    document.removeEventListener("mousedown", outsideClickHandler);
-    outsideClickHandler = null;
+  if (popoverClickHandler) {
+    document.removeEventListener("pointerdown", popoverClickHandler);
+    popoverClickHandler = null;
   }
 
   // 3 - Devolver el foco al trigger original
@@ -150,16 +150,15 @@ export function openPopover(trigger, container = document.body) {
   document.addEventListener("keydown", keydownHandler);
 
   // 6 - Manejar eventos de ratón
-  if (popoverClose) {
-    popoverClose.addEventListener("click", () => closePopovers(), {
-      once: true,
-    });
-  }
-  outsideClickHandler = (e) => {
+  popoverClickHandler = (e) => {
     if (e.target === lastTrigger) return;
+    if (e.target.closest(".js-popover-close")) {
+      closePopovers();
+      return;
+    }
     if (!popover.contains(e.target)) {
       closePopovers();
     }
   };
-  document.addEventListener("mousedown", outsideClickHandler);
+  document.addEventListener("pointerdown", popoverClickHandler);
 }

@@ -65,8 +65,4 @@ export function initCardDetails() {
       openPopover(el, document.querySelector(".js-cards"));
     });
   });
-
-  window.addEventListener("resize", () => {
-    closePopovers();
-  });
 }
