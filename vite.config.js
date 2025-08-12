@@ -7,6 +7,7 @@ export default defineConfig({
       "@": path.resolve(__dirname, "src"),
       "@assets": path.resolve(__dirname, "src/assets"),
       "@components": path.resolve(__dirname, "src/components"),
+      "@utils": path.resolve(__dirname, "src/utils"),
       "@data": path.resolve(__dirname, "src/data"),
       "@styles/settings": path.resolve(__dirname, "src/styles/01-settings"),
       "@styles/tools": path.resolve(__dirname, "src/styles/02-tools"),
