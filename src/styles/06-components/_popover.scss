@@ -12,7 +12,7 @@
     height: 100vh;
     text-align: initial;
     overflow: hidden;
-    z-index: 40;
+    z-index: 90;
     color: var(--popover-fg);
     background: var(--popover-bg);
     padding: to-rem(20px 16px 16px);
@@ -23,6 +23,7 @@
         left: to-rem(-4px);
         width: to-rem(320px);
         height: auto;
+        z-index: 60;
         border-radius: $border-overlay-radius;
         border: $border-overlay-width solid var(--popover-border-color);
         box-shadow: var(--shadow-overlay);

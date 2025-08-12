@@ -38,7 +38,7 @@ export function createPopover(id, popoverContent) {
 
       <div class="popover__content">
         <!-- Título accesible del diálogo (si ya tienes un <h3> en el contenido, puedes eliminar este y referenciar el tuyo) -->
-        <h3 id="popover-title-${id}" class="u-visually-hidden">Detalles</h3>
+        <h3 id="popover-title-${id}" class="u-d-none">Detalles</h3>
         ${popoverContent}
       </div>
     </div>
