@@ -138,7 +138,7 @@ export const cardsData = [
     experience: "Ruta",
     country: "España",
     region: "Cataluña",
-    destination: "Parque Natural Montseny",
+    destination: "Parque Natural del Montseny",
     title: "Ruta en Cataluña",
     description:
       "Explora senderos únicos entre paisajes naturales y patrimonio local.",
