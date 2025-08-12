@@ -1,4 +1,5 @@
 import { cardsData } from "@data/data";
+import { slugify } from "@utils/slugify";
 
 const activeFilters = {
   region: [],
@@ -39,7 +40,7 @@ function createLegend(icon, name) {
 function createCheckbox(groupName, filterId, filterLabel) {
   return `
   <label for="${filterId}" class="u-capitalize">
-  <input class="input" type="checkbox" name="${groupName}" id="${filterId}" value="${filterId}">
+  <input class="input" type="checkbox" name="${groupName}" id="${filterId}" value="${filterLabel}">
   ${filterLabel} 
   </label>
   `;
@@ -70,7 +71,7 @@ function createFieldset(filterName, filterLabel) {
         .map(
           (value) => `
           <div class="checkbox-wrapper">
-            ${createCheckbox(filterName, value, value)}
+            ${createCheckbox(filterName, slugify(value), value)}
           </div>
         `
         )
@@ -83,7 +84,7 @@ function createFieldset(filterName, filterLabel) {
 export function createFilters() {
   const fragment = document.createRange().createContextualFragment(`
     <div class="filters__toggle">
-      <button type="submit" class="button button--secondary button--md button--icon js-filters-toggle" aria-controls="filtersPanel" aria-expanded="false">
+      <button type="button" class="button button--secondary button--md button--icon js-filters-toggle" aria-controls="filtersPanel" aria-expanded="false">
         <svg aria-hidden="true" class="icon icon--24">
           <use xlink:href="/sprite.svg#filter"></use>
         </svg>
