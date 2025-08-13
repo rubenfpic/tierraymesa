@@ -1,7 +1,7 @@
 export const cardsData = [
   {
     id: "101",
-    image: "card101.png",
+    image: "card101.webp",
     tag: "Novedad",
     experience: "Ruta",
     country: "España",
@@ -21,7 +21,7 @@ export const cardsData = [
 
   {
     id: "102",
-    image: "card102.png",
+    image: "card102.webp",
     experience: "Degustación",
     country: "España",
     region: "Galicia",
@@ -44,7 +44,7 @@ export const cardsData = [
 
   {
     id: "103",
-    image: "card103.png",
+    image: "card103.webp",
     tag: "Oferta limitada",
     experience: "Alojamiento",
     country: "España",
@@ -67,7 +67,7 @@ export const cardsData = [
 
   {
     id: "104",
-    image: "card104.png",
+    image: "card104.webp",
     experience: "Cata",
     country: "España",
     region: "Galicia",
@@ -90,7 +90,7 @@ export const cardsData = [
 
   {
     id: "105",
-    image: "card105.png",
+    image: "card105.webp",
     tag: "Novedad",
     experience: "Cata",
     country: "España",
@@ -114,7 +114,7 @@ export const cardsData = [
 
   {
     id: "106",
-    image: "card106.png",
+    image: "card106.webp",
     experience: "Alojamiento",
     country: "España",
     region: "Andalucía",
@@ -133,7 +133,7 @@ export const cardsData = [
 
   {
     id: "107",
-    image: "card107.png",
+    image: "card107.webp",
     tag: "Oferta limitada",
     experience: "Ruta",
     country: "España",
@@ -153,7 +153,7 @@ export const cardsData = [
 
   {
     id: "108",
-    image: "card108.png",
+    image: "card108.webp",
     experience: "Degustación",
     country: "España",
     region: "Aragón",
@@ -176,7 +176,7 @@ export const cardsData = [
 
   {
     id: "109",
-    image: "card109.png",
+    image: "card109.webp",
     tag: "Oferta limitada",
     experience: "Cata",
     country: "España",
@@ -200,7 +200,7 @@ export const cardsData = [
 
   {
     id: "110",
-    image: "card110.png",
+    image: "card110.webp",
     experience: "Ruta",
     country: "España",
     region: "Galicia",
@@ -219,7 +219,7 @@ export const cardsData = [
 
   {
     id: "111",
-    image: "card111.png",
+    image: "card111.webp",
     tag: "Recomendado",
     experience: "Cata",
     country: "España",
@@ -243,7 +243,7 @@ export const cardsData = [
 
   {
     id: "112",
-    image: "card112.png",
+    image: "card112.webp",
     experience: "Alojamiento",
     country: "España",
     region: "Cantabria",
