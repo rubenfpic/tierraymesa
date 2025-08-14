@@ -100,6 +100,14 @@
     --input-border: var(--color-primary);
     --input-border-hover: var(--color-primary-dark);
 
+    /* Lightbox */
+    --lightbox-backdrop: rgba(var(--backdrop-rgb), var(--backdrop-opacity));
+    --lightbox-filter: var(--backdrop-filter);
+    --lightbox-caption-fg: var(--color-primary);
+    --lightbox-caption-bg: var(--color-surface);
+    --lightbox-close-fg: var(--color-primary);
+    --lightbox-close-bg: var(--color-surface);
+
     /* Footer */
     --footer-border-color: var(--color-secondary);
     --footer-main-bg: var(--color-secondary-light);

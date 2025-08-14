@@ -9,8 +9,9 @@ import {
   toggleFiltersList,
   activateCheckboxFilter,
 } from "@components/filters";
-import { closePopovers } from "./components/popover";
+import { closePopovers } from "@components/popover";
 import { createCards, updateCards, initCardDetails } from "@components/cards";
+import { initLightbox } from "@components/lightbox";
 
 function onFilterChange(filteredCards) {
   updateCards(filteredCards);
@@ -35,6 +36,7 @@ const cardsNode = document.getElementById("cards");
 const cardsContent = createCards();
 cardsNode.appendChild(cardsContent);
 initCardDetails();
+initLightbox();
 
 const footerNode = document.getElementById("footer");
 const footerContent = createFooter();
