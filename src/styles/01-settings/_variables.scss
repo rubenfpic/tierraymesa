@@ -25,7 +25,8 @@ $backdrop-filter: blur(to-rem(4px));
     --shadow-disabled: 0 #{$shadow-disabled-offset-y} #{$shadow-disabled-blur} var(--color-shadow-disabled);
     --shadow-overlay: 0 #{$shadow-overlay-offset-y} #{$shadow-overlay-blur} var(--color-shadow-overlay);
 
-    --backdrop-rgb: #{red($backdrop-rgb)}, #{green($backdrop-rgb)}, #{blue($backdrop-rgb)};
+    --backdrop-rgb: #{color.channel($backdrop-rgb, "red", $space: rgb)},
+        #{color.channel($backdrop-rgb, "green", $space: rgb)}, #{color.channel($backdrop-rgb, "blue", $space: rgb)};
     --backdrop-opacity: #{$backdrop-opacity};
     --backdrop-filter: #{$backdrop-filter};
 }
