@@ -1,0 +1,15 @@
+@use "@styles/tools/functions" as *;
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: to-rem(48px);
+
+    &__item {
+        color: var(--color-text-base);
+
+        &:hover {
+            color: var(--color-text-muted);
+        }
+    }
+}

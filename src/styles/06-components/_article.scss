@@ -1,0 +1,17 @@
+@use "@styles/tools/functions" as *;
+
+.article {
+    padding: to-rem(32px);
+
+    &__title {
+        font-size: 24px;
+        margin-bottom: to-rem(16px);
+        color: var(--article-title-fg);
+    }
+
+    &__text {
+        font-size: to-rem(14px);
+        margin-bottom: to-rem(8px);
+        color: var(--article-text-fg);
+    }
+}

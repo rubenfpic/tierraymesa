@@ -1,6 +1,14 @@
+// Styles
 import "@styles/index.scss";
+
+// Routes
+import { initRouter } from "./router.js";
+
+// Generic
 import { createHeader } from "@components/header";
 import { createFooter } from "@components/footer";
+
+// Section - Experiences
 import { createIntro } from "@components/intro";
 import {
   createFilters,
@@ -9,40 +17,48 @@ import {
   toggleFiltersList,
   activateCheckboxFilter,
 } from "@components/filters";
-import { closePopovers } from "@components/popover";
 import { createCards, updateCards, initCardDetails } from "@components/cards";
+// Section - About us
+import { createAboutUs } from "@components/about-us";
+
+// Utils
+import { closePopovers } from "@components/popover";
 import { initLightbox } from "@components/lightbox";
 
-function onFilterChange(filteredCards) {
-  updateCards(filteredCards);
+function renderSection(id, factory) {
+  const node = document.getElementById(id);
+  node.innerHTML = "";
+  node.appendChild(factory());
 }
 
-const headerNode = document.getElementById("header");
-const headerContent = createHeader();
-headerNode.appendChild(headerContent);
-
-const introNode = document.getElementById("intro");
-const introContent = createIntro();
-introNode.appendChild(introContent);
-
-const filtersNode = document.getElementById("filters");
-const filtersContent = createFilters();
-filtersNode.appendChild(filtersContent);
-toggleFiltersPanel();
-toggleFiltersFieldset();
-toggleFiltersList();
-
-const cardsNode = document.getElementById("cards");
-const cardsContent = createCards();
-cardsNode.appendChild(cardsContent);
-initCardDetails();
-initLightbox();
-
-const footerNode = document.getElementById("footer");
-const footerContent = createFooter();
-footerNode.appendChild(footerContent);
+renderSection("header", createHeader);
+renderSection("footer", createFooter);
 
 window.addEventListener("resize", closePopovers);
 
-activateCheckboxFilter("region", onFilterChange);
-activateCheckboxFilter("experience", onFilterChange);
+initRouter({
+  onRouteChange: (path) => {
+    if (path === "/" || path === "/experiences") {
+      function onFilterChange(filteredCards) {
+        updateCards(filteredCards);
+      }
+
+      renderSection("intro", createIntro);
+      renderSection("filters", createFilters);
+      renderSection("cards", createCards);
+
+      toggleFiltersPanel();
+      toggleFiltersFieldset();
+      toggleFiltersList();
+      initCardDetails();
+      initLightbox();
+      activateCheckboxFilter("region", onFilterChange);
+      activateCheckboxFilter("experience", onFilterChange);
+    }
+    if (path === "/about-us") {
+      const aboutUsNode = document.getElementById("about-us");
+      const aboutUsContent = createAboutUs();
+      aboutUsNode.appendChild(aboutUsContent);
+    }
+  },
+});
