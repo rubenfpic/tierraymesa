@@ -112,6 +112,15 @@
     --article-title-fg: var(--color-primary);
     --article-text-fg: var(--color-text-base);
 
+    /* Nav */
+    --nav-bg: var(--color-surface-dark);
+    --nav-bg-hover: var(--color-text-muted);
+    --nav-fg: var(--color-primary);
+    --nav-fg-hover: var(--color-primary-light);
+    --nav-border-color: var(--color-surface-border);
+    --nav-active-fg: var(--color-primary);
+    --nav-active-fg-hover: var(--color-primary-light);
+
     /* Footer */
     --footer-border-color: var(--color-secondary);
     --footer-main-bg: var(--color-secondary-light);

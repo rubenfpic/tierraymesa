@@ -1,4 +1,5 @@
 import logo from "@assets/images/logo-color.svg";
+import { showMobileNav, hideMobileNav } from "./nav.js";
 
 export function createHeader() {
   const fragment = document.createRange().createContextualFragment(`
@@ -8,16 +9,39 @@ export function createHeader() {
         <span class="logo__text" aria-label="Tierra y Mesa">tierraymesa</span>
       </a>
       <div class="header__nav">
-        <nav class="nav">
-          <a class="nav__item" href="/experiences" data-route="/experiences">Experiencias</a>
-          <a class="nav__item" href="/about-us" data-route="/about-us">Sobre nosotros</a>
+        <nav class="nav js-nav" id="nav" aria-label="Menú principal">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="/experiences" class="nav__link is-active" data-route="/experiences">Experiencias</a>
+            </li>
+            <li class="nav__item">
+              <a href="/about-us" class="nav__link" data-route="/about-us">Sobre nosotros</a>
+            </li>
+          </ul>
         </nav>
       </div>
       <div class="header__actions">
-        
+        <button type="button" class="button button--icon button--link header__burger js-burger" aria-label="Abrir el menú principal" aria-controls="nav" aria-expanded="false">
+          <svg class="icon icon--32" aria-hidden="true">
+            <use xlink:href="/sprite.svg#burger"></use>
+          </svg>
+        </button>
       </div>
     </div>  
   `);
+
+  const burger = fragment.querySelector(".js-burger");
+  const nav = fragment.querySelector(".js-nav");
+
+  burger.addEventListener("click", () => {
+    const isExpanded = nav.classList.contains("is-open");
+
+    !isExpanded ? showMobileNav(nav, burger) : hideMobileNav(nav, burger);
+  });
+
+  window.addEventListener("resize", () => {
+    hideMobileNav(nav, burger);
+  });
 
   return fragment;
 }

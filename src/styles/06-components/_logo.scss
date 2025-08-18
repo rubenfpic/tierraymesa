@@ -13,10 +13,10 @@
     }
 
     &__img {
-        height: to-rem(36px);
+        height: to-rem(32px);
 
         @include media(tablet) {
-            height: to-rem(56px);
+            height: to-rem(40px);
         }
     }
 
@@ -37,7 +37,7 @@
         }
 
         @include media(tablet) {
-            font-size: to-rem(36px);
+            font-size: to-rem(32px);
             padding-left: to-rem(12px);
 
             &:before {

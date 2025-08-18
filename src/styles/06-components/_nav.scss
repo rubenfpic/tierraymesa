@@ -1,15 +1,161 @@
+@use "@styles/tools/mixins" as *;
 @use "@styles/tools/functions" as *;
 
 .nav {
-    display: flex;
-    align-items: center;
-    gap: to-rem(48px);
+    display: none;
+    position: relative;
+    font-weight: 600;
+
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 90vw;
+    height: 100vh;
+    padding-top: to-rem(64px);
+    background: var(--nav-bg);
+    box-shadow: var(--shadow-overlay);
+    z-index: 60;
+
+    @include media(tablet) {
+        padding-top: to-rem(80px);
+        width: 50vw;
+    }
+
+    @include media(laptop) {
+        box-shadow: none;
+        background: transparent;
+        display: flex;
+        position: relative;
+        width: auto;
+        height: auto;
+        padding-top: 0;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+        margin: 0;
+
+        @include media(laptop) {
+            gap: to-rem(16px);
+            flex-direction: row;
+        }
+
+        @include media(desktop) {
+            gap: to-rem(72px);
+        }
+    }
 
     &__item {
-        color: var(--color-text-base);
+        list-style: none;
+
+        padding: to-rem(0);
+        border-top: to-rem(1px) solid var(--nav-border-color);
+
+        &:last-of-type {
+            border-bottom: to-rem(1px) solid var(--nav-border-color);
+        }
+
+        @include media(laptop) {
+            padding: 0;
+            border-top: none;
+            text-align: center;
+
+            &:last-of-type {
+                border-bottom: none;
+            }
+        }
+    }
+
+    &__link {
+        display: inline-flex;
+        flex-direction: row;
+        align-items: center;
+        text-decoration: none;
+        color: var(--nav-fg);
+        position: relative;
+        padding: to-rem(16px 32px);
+        transition: all 0.1s ease;
 
         &:hover {
-            color: var(--color-text-muted);
+            color: var(--nav-fg-hover);
         }
+
+        &.is-active {
+            font-weight: 700;
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                border-left: to-rem(2px) solid var(--nav-active-fg);
+                transition: all 0.1s ease;
+            }
+
+            &::before {
+                content: "";
+                transform: translateX(-5%) translateY(5%) rotate(90deg);
+                position: absolute;
+                left: 0;
+                border-left: to-rem(9px) solid transparent;
+                border-right: to-rem(9px) solid transparent;
+                border-bottom: to-rem(12px) solid var(--nav-active-fg);
+                transition: all 0.1s ease;
+            }
+
+            &:hover {
+                &::after {
+                    border-left-color: var(--nav-active-fg-hover);
+                }
+                &::before {
+                    border-bottom-color: var(--nav-active-fg-hover);
+                }
+            }
+        }
+
+        @include media(laptop) {
+            height: to-rem(80px);
+            padding: 0;
+
+            &.is-active {
+                font-weight: 700;
+
+                &::after {
+                    content: "";
+                    width: 100%;
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    border-left: none;
+                    border-bottom: to-rem(2px) solid var(--nav-active-fg);
+                }
+
+                &::before {
+                    content: "";
+                    transform: translateX(-50%) translateY(100%);
+                    position: absolute;
+                    left: 50%;
+                    bottom: to-rem(12px);
+                    border-left: to-rem(9px) solid transparent;
+                    border-right: to-rem(9px) solid transparent;
+                    border-bottom: to-rem(12px) solid var(--nav-active-fg);
+                }
+
+                &:hover {
+                    &::before,
+                    &::after {
+                        border-bottom-color: var(--nav-active-fg-hover);
+                    }
+                }
+            }
+        }
+    }
+
+    &.is-open {
+        display: block;
     }
 }

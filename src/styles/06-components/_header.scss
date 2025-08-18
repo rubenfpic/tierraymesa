@@ -6,6 +6,7 @@
         display: flex;
         background: var(--header-bg);
         padding: to-rem(8px 16px);
+        height: to-rem(64px);
         position: relative;
         z-index: 80;
 
@@ -20,7 +21,6 @@
 
         @include media(mobile) {
             padding: to-rem(8px 16px);
-            height: to-rem(56px);
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
@@ -34,51 +34,37 @@
         @include media(laptop) {
             justify-content: space-between;
             align-items: center;
-            height: 100%;
             position: relative;
-            padding: to-rem(24px 24px);
-
-            // &::after {
-            //     content: "";
-            //     width: 100%;
-            //     position: absolute;
-            //     left: 0;
-            //     bottom: 0;
-            //     border-bottom: to-rem(1px) solid var(--tab-navbar-selection-indicator-background-active);
-            // }
+            padding: to-rem(16px 16px);
         }
     }
 
-    // &__actions {
-    //     z-index: 60;
+    &__actions {
+        z-index: 60;
 
-    //     .button--primary {
-    //         display: none;
-    //     }
+        .button--primary {
+            display: none;
+        }
 
-    //     @include media(laptop) {
-    //         .button--primary {
-    //             display: block;
-    //         }
-    //     }
-    // }
+        @include media(laptop) {
+            .button--primary {
+                display: block;
+            }
+        }
+    }
 
-    // &__burger {
-    //     background: transparent;
-    //     position: absolute;
-    //     left: calc(100vw - 4rem);
-    //     top: to-rem(8px);
+    &__burger.button {
+        background: transparent;
+        position: absolute;
+        left: calc(100vw - 4rem);
+        top: to-rem(12px);
 
-    //     @include media(mobile) {
-    //         top: to-rem(16px);
-    //     }
+        @include media(tablet) {
+            top: to-rem(20px);
+        }
 
-    //     @include media(tablet) {
-    //         top: to-rem(24px);
-    //     }
-
-    //     @include media(laptop) {
-    //         display: none;
-    //     }
-    // }
+        @include media(laptop) {
+            display: none;
+        }
+    }
 }

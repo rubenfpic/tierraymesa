@@ -56,9 +56,7 @@ initRouter({
       activateCheckboxFilter("experience", onFilterChange);
     }
     if (path === "/about-us") {
-      const aboutUsNode = document.getElementById("about-us");
-      const aboutUsContent = createAboutUs();
-      aboutUsNode.appendChild(aboutUsContent);
+      renderSection("about-us", createAboutUs);
     }
   },
 });
