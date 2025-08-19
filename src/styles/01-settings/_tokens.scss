@@ -1,14 +1,10 @@
 @use "@styles/settings/variables" as *;
 
 :root {
-    /***************/
-    /* Propiedades */
-    /***************/
-
     /* Logo */
-    --color-logo: var(--color-tertiary-dark); /* Color del logo */
+    --color-logo: var(--color-tertiary-dark);
 
-    /* Texto genérico (negro sobre fondo claro) */
+    /* Texto genérico */
     --color-text-base: var(--color-gray-900);
     --color-text-base-inverted: var(--color-gray-100);
     --color-text-muted: var(--color-gray-700);
@@ -16,21 +12,13 @@
     --color-text-disabled: var(--color-gray-500);
     --color-text-disabled-inverted: var(--color-gray-500);
 
-    /* Títulos y encabezados */
-    // --color-text-heading: var(--color-text-base);
-    // --color-text-subheading: var(--color-text-muted);
-
     /* Icons */
     --color-icon: var(--color-text-base);
     --color-icon-hover: var(--color-text-muted);
 
     /* Enlaces y acciones */
-    --color-link: var(--color-primary); /* Color morado/uva, marca */
-    --color-link-hover: var(--color-primary-light); /* Versión clara o hover */
-
-    /***************/
-    /* Componentes */
-    /***************/
+    --color-link: var(--color-primary);
+    --color-link-hover: var(--color-primary-light);
 
     /* Body (viewport) */
     --body-bg: var(--color-gray-500);
@@ -127,4 +115,37 @@
     --footer-main-fg: var(--color-secondary-dark);
     --footer-copyright-bg: var(--color-secondary);
     --footer-copyright-fg: var(--color-gray-100);
+}
+
+:root[data-theme="dark"] {
+    --color-logo: var(--color-tertiary-light);
+
+    --header-bg: var(--color-tertiary-dark);
+    --header-fg: var(--color-gray-100);
+    --header-border-color: var(--color-tertiary-dark);
+
+    --nav-bg: var(--color-surface-dark);
+    --nav-bg-hover: var(--color-text-muted);
+    --nav-fg: var(--color-primary);
+    --nav-fg-hover: var(--color-primary-dark);
+    --nav-active-fg: var(--color-primary);
+    --nav-active-fg-hover: var(--color-primary-dark);
+
+    --button-primary-fg: var(--color-gray-900);
+    --button-primary-bg: var(--color-primary);
+    --button-primary-bg-hover: var(--color-primary-light);
+
+    --button-secondary-fg: var(--color-primary);
+    --button-secondary-fg-hover: var(--color-primary-light);
+    --button-secondary-bg: var(--color-surface-light);
+    --button-secondary-bg-hover: var(--color-surface);
+
+    --color-link: var(--color-primary);
+    --color-link-hover: var(--color-primary-dark);
+
+    --footer-border-color: var(--color-secondary);
+    --footer-main-bg: var(--color-secondary-dark);
+    --footer-main-fg: var(--color-secondary-light);
+    --footer-copyright-bg: var(--color-secondary);
+    --footer-copyright-fg: var(--color-gray-900);
 }

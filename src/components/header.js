@@ -23,11 +23,11 @@ export function createHeader() {
         </nav>
       </div>
       <div class="header__actions">
-        <select id="theme-selector">
-          <option value="system">Sistema</option>
-          <option value="light">Claro</option>
-          <option value="dark">Oscuro</option>
-        </select>
+        <button type="button" class="button button--icon button--link header__theme js-theme" aria-label="Cambiar el tema" aria-controls="nav" aria-theme="dark">
+          <svg class="icon icon--32" aria-hidden="true">
+            <use xlink:href="/sprite.svg#theme"></use>
+          </svg>
+        </button>
         <button type="button" class="button button--icon button--link header__burger js-burger" aria-label="Abrir el menú principal" aria-controls="nav" aria-expanded="false">
           <svg class="icon icon--32" aria-hidden="true">
             <use xlink:href="/sprite.svg#burger"></use>
@@ -39,11 +39,19 @@ export function createHeader() {
 
   const burger = fragment.querySelector(".js-burger");
   const nav = fragment.querySelector(".js-nav");
+  const theme = fragment.querySelector(".js-theme");
 
   burger.addEventListener("click", () => {
     const isExpanded = nav.classList.contains("is-open");
 
     !isExpanded ? showMobileNav(nav, burger) : hideMobileNav(nav, burger);
+  });
+
+  theme.addEventListener("click", () => {
+    const currentTheme = document.documentElement.getAttribute("data-theme");
+    const newTheme = currentTheme === "dark" ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", newTheme);
+    theme.setAttribute("aria-theme", newTheme);
   });
 
   window.addEventListener("resize", () => {
