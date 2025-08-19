@@ -39,7 +39,26 @@
         }
     }
 
+    &__logo {
+        flex-basis: 50%;
+        flex-shrink: 1;
+        flex-grow: 0;
+    }
+
+    &__nav {
+        flex-grow: 1;
+        flex-shrink: 0;
+        flex-basis: auto;
+    }
+
     &__actions {
+        flex-basis: 50%;
+        flex-shrink: 1;
+        flex-grow: 0;
+
+        display: flex;
+        justify-content: flex-end;
+
         z-index: 60;
 
         .button--primary {
@@ -55,13 +74,6 @@
 
     &__burger.button {
         background: transparent;
-        position: absolute;
-        left: calc(100vw - 4rem);
-        top: to-rem(12px);
-
-        @include media(tablet) {
-            top: to-rem(20px);
-        }
 
         @include media(laptop) {
             display: none;

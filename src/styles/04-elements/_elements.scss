@@ -2,6 +2,10 @@
 @use "@styles/settings/tokens";
 @use "@styles/tools/functions" as *;
 
+html {
+    scrollbar-gutter: stable;
+}
+
 body {
     font-family: "Sora variable", sans-serif;
     color: var(--body-fg);
