@@ -1,4 +1,5 @@
 import { createPopover, openPopover, closePopovers } from "@components/popover";
+import { getImageUrl } from "@utils/images";
 
 export function createCard({
   id,
@@ -19,6 +20,7 @@ export function createCard({
   finalPrice,
   popoverContent,
 }) {
+  const cardImage = getImageUrl(image);
   const summaryContent = `
     <div class="summary">
       <h4 class="summary__title"><strong>${destination}</strong> (${region})</h4>
@@ -66,9 +68,9 @@ export function createCard({
         <img class="card__image js-card-image"
           loading="lazy"
           data-lightbox
-          data-lightbox-src="/src/assets/images/content/${image}"
+          data-lightbox-src="${cardImage}"
           data-lightbox-caption="${destination} (${region})"
-          src="/src/assets/images/content/${image}"
+          src="${cardImage}"
           alt="Imagen de ${experience} en ${destination}" />
         ${tag ? `<span class="card__tag">${tag}</span>` : ""}
       </div>
