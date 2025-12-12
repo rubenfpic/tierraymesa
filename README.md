@@ -2,9 +2,6 @@
 
 Web de inspiración para escapadas rurales centradas en gastronomía, vino y turismo local, desarrollada como ejercicio de maquetación y funcionalidad **responsive**.
 
-Este proyecto **se basa y evoluciona a partir de una prueba técnica previa** realizada para un tercero, adaptando el diseño, los contenidos y la temática a un uso propio.  
-Se han eliminado referencias comerciales y se ha reestructurado el código para convertirlo en una base reutilizable y mejorada.
-
 ## Tecnologías utilizadas
 
 - **Vite 7.0.4** como entorno de desarrollo y compilación.
@@ -12,8 +9,6 @@ Se han eliminado referencias comerciales y se ha reestructurado el código para 
 - **JavaScript modular** para la lógica y la generación de componentes.
 
 ## Maquetación
-
-La maquetación ha sido realizada de manera adaptable partiendo del móvil (**responsive mobile first**) y se han tenido en cuenta los 4 diseños que hay en el Figma, que se han denominado de la siguiente forma:
 
 La maquetación ha sido realizada de manera adaptable partiendo del móvil **responsive mobile first**, basado en 4 puntos de corte:
 
@@ -70,8 +65,8 @@ npm run build    # Generar versión optimizada en /dist
 
 ## Notas
 
-Este proyecto se basa en la estructura conceptual de una prueba técnica previa, pero todo el código ha sido reescrito y adaptado para uso propio.
+Este proyecto se basa en la estructura conceptual de una prueba técnica previa realizada para un tercero, pero todo el código ha sido reescrito y adaptado para uso propio.
 
-No se han utilizado fuentes, logotipos, iconos, imágenes ni temática del original.
+No se han utilizado fuentes, logotipos, iconos, imágenes, colores, ni temática del original.
 
 El diseño, los contenidos y la implementación actual son íntegramente obra propia.
