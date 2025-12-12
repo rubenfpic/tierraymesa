@@ -1,4 +1,9 @@
+let isLightboxInitialized = false;
+
 export function initLightbox() {
+  if (isLightboxInitialized) return;
+  isLightboxInitialized = true;
+
   const overlay = document.createElement("div");
   overlay.className = "lightbox";
   overlay.setAttribute("aria-hidden", "true");
