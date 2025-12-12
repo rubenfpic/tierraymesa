@@ -24,8 +24,11 @@
     }
 
     &__title {
+        display: flex;
+        align-items: center;
+        gap: to-rem(8px);
         width: 100%;
-        padding: to-rem(0 16px);
+        padding: to-rem(0 16px 0 0);
         font-weight: 600;
         font-size: to-rem(22px);
         line-height: to-rem(24px);

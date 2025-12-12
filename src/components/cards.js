@@ -1,5 +1,6 @@
 import { cardsData } from "@data/data";
 import { createCard } from "@components/card";
+import { slugify } from "@utils/slugify";
 import { createPopover, openPopover, closePopovers } from "@components/popover";
 
 function renderCards(cardsArray) {
@@ -29,7 +30,12 @@ function buildCards(cardsArray) {
     .map(
       ([experience, cards]) => `
         <div class="cards__list js-cards-list">
-          <h2 class="cards__title u-capitalize js-cards-title">${experience}</h2>
+          <h2 class="cards__title u-capitalize js-cards-title">
+            <svg aria-hidden="true" class="icon icon--24">
+              <use xlink:href="/sprite.svg#${slugify(experience)}"></use>
+            </svg>
+            ${experience}
+          </h2>
           ${cards
             .map(
               (card) => `
