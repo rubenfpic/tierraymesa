@@ -32,7 +32,7 @@ export function createPopover(id, popoverContent) {
          data-popover-for="popover-${id}">
       <button type="button" class="popover__close js-popover-close" aria-label="Cerrar">
         <svg aria-hidden="true" class="icon icon--16">
-          <use xlink:href="/sprite.svg#close"></use>
+          <use xlink:href="${import.meta.env.BASE_URL}sprite.svg#close"></use>
         </svg>
       </button>
 

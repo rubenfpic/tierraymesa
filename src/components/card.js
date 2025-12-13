@@ -20,6 +20,7 @@ export function createCard({
   finalPrice,
   popoverContent,
 }) {
+  const spriteHref = `${import.meta.env.BASE_URL}sprite.svg`;
   const cardImage = getImageUrl(image);
   const summaryContent = `
     <div class="summary">
@@ -87,7 +88,7 @@ export function createCard({
             Ver detalles
           </button>
           <svg class="icon icon--16 icon--90deg" aria-hidden="true">
-            <use xlink:href="/sprite.svg#chevron"></use>
+            <use xlink:href="${spriteHref}#chevron"></use>
           </svg>
           ${createPopover(id, summaryContent)}
         </div>        

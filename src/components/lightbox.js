@@ -14,7 +14,7 @@ export function initLightbox() {
       <figcaption class="lightbox__caption js-lightbox-caption" hidden></figcaption>
       <button type="button" class="lightbox__close js-lightbox-close" aria-label="Cerrar" data-lightbox-close>
         <svg aria-hidden="true" class="icon icon--24">
-          <use xlink:href="/sprite.svg#close"></use>
+          <use xlink:href="${import.meta.env.BASE_URL}sprite.svg#close"></use>
         </svg>
       </button>
     </figure>

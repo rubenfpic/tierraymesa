@@ -6,6 +6,8 @@ const activeFilters = {
   experience: [],
 };
 
+const spriteHref = `${import.meta.env.BASE_URL}sprite.svg`;
+
 function updateActiveFilters(filterName) {
   const checkboxes = document.querySelectorAll(`input[name="${filterName}"]`);
   activeFilters[filterName] = Array.from(checkboxes)
@@ -26,11 +28,11 @@ function createLegend(icon, name) {
     <legend class="filters__legend js-legend">
       <button type="button" class="filters__legend-button js-legend-button" aria-expanded="true">
         <svg class="icon icon--24" aria-hidden="true">
-          <use xlink:href="/sprite.svg#${icon}"></use>
+          <use xlink:href="${spriteHref}#${icon}"></use>
         </svg>
         <span class="filters__legend-text">${name} </span>
         <svg class="filters__legend-expander icon icon--24 js-chevron" aria-hidden="true">
-          <use xlink:href="/sprite.svg#chevron"></use>
+          <use xlink:href="${spriteHref}#chevron"></use>
         </svg>
       </button>
     </legend>
@@ -49,7 +51,7 @@ function createCheckbox(groupName, filterId, filterLabel) {
 function createInput(icon, name, placeholder) {
   return `
   <svg class="input-wrapper__icon" aria-hidden="true">
-  <use xlink:href="/sprite.svg#${icon}"></use>
+  <use xlink:href="${spriteHref}#${icon}"></use>
   </svg>
     <input class="input input--icon" type="text" name="${name}" placeholder="${placeholder}">
   `;
@@ -86,7 +88,7 @@ export function createFilters() {
     <div class="filters__toggle">
       <button type="button" class="button button--secondary button--md button--icon js-filters-toggle" aria-controls="filtersPanel" aria-expanded="false">
         <svg aria-hidden="true" class="icon icon--24">
-          <use xlink:href="/sprite.svg#filter"></use>
+          <use xlink:href="${spriteHref}#filter"></use>
         </svg>
         <span>Filtros</span>
       </button>
@@ -98,7 +100,7 @@ export function createFilters() {
           <div class="filters__close">
             <button type="button" class="button button--icon button--link u-p-0 js-filters-close" aria-label="Cerrar panel de filtros">
               <svg class="icon icon--24" aria-hidden="true">
-                <use xlink:href="/sprite.svg#close"></use>
+                <use xlink:href="${spriteHref}#close"></use>
               </svg>
             </button>
           </div>

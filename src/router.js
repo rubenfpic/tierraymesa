@@ -1,5 +1,24 @@
 import { setActiveNav, hideMobileNav } from "@components/nav";
 
+const basePath = (() => {
+  const base = import.meta.env.BASE_URL || "/";
+  if (base === "/") return "";
+  return base.endsWith("/") ? base.slice(0, -1) : base;
+})();
+
+function stripBase(pathname) {
+  if (basePath && pathname.startsWith(basePath)) {
+    const stripped = pathname.slice(basePath.length) || "/";
+    return stripped.startsWith("/") ? stripped : `/${stripped}`;
+  }
+  return pathname;
+}
+
+function withBase(path) {
+  if (!basePath) return path;
+  return path === "/" ? `${basePath}/` : `${basePath}${path}`;
+}
+
 // Router mínimo con History API y plantillas embebidas (<template>)
 // - Mantiene un único index.html con varias vistas (experiencias / about-us)
 // - Sin librerías: delegación de eventos + pushState/popstate
@@ -65,7 +84,7 @@ export function initRouter({ onRouteChange } = {}) {
     // Actualiza la URL sin recargar la página:
     // - replaceState en cargas iniciales o navegación por historial
     // - pushState en clics de usuario
-    const url = path;
+    const url = withBase(path);
     if (replace) history.replaceState({ path }, "", url);
     else history.pushState({ path }, "", url);
 
@@ -106,7 +125,7 @@ export function initRouter({ onRouteChange } = {}) {
   // - Lee el estado almacenado en history.state o, si no existe, location.pathname
   // - Usa replace para no duplicar entradas en el historial
   window.addEventListener("popstate", (e) => {
-    const path = e.state?.path || location.pathname;
+    const path = e.state?.path || stripBase(location.pathname);
     render(path, /*replace*/ true);
   });
 
@@ -114,6 +133,7 @@ export function initRouter({ onRouteChange } = {}) {
   // - Si la ruta actual existe, la renderiza
   // - Si no, cae a "/"
   // - replace para establecer el estado inicial sin añadir una nueva entrada
-  const initial = routes[location.pathname] ? location.pathname : "/";
+  const initialPath = stripBase(location.pathname);
+  const initial = routes[initialPath] ? initialPath : "/";
   render(initial, /*replace*/ true);
 }

@@ -3,6 +3,8 @@ import { createCard } from "@components/card";
 import { slugify } from "@utils/slugify";
 import { createPopover, openPopover, closePopovers } from "@components/popover";
 
+const spriteHref = `${import.meta.env.BASE_URL}sprite.svg`;
+
 function renderCards(cardsArray) {
   const cardsContainer = document.querySelector(".js-cards");
   if (!cardsContainer) return;
@@ -32,7 +34,7 @@ function buildCards(cardsArray) {
         <div class="cards__list js-cards-list">
           <h2 class="cards__title u-capitalize js-cards-title">
             <svg aria-hidden="true" class="icon icon--24">
-              <use xlink:href="/sprite.svg#${slugify(experience)}"></use>
+              <use xlink:href="${spriteHref}#${slugify(experience)}"></use>
             </svg>
             ${experience}
           </h2>
