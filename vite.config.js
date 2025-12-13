@@ -8,6 +8,9 @@ export default defineConfig(({ command }) => {
 
   return {
     base,
+    build: {
+      outDir: "docs",
+    },
     resolve: {
       alias: {
         "@": path.resolve(__dirname, "src"),
