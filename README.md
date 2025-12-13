@@ -1,4 +1,4 @@
-# Proyecto - Tierra y Mesa
+# Tierra y Mesa
 
 Web de inspiración para escapadas rurales centradas en gastronomía, vino y turismo local, desarrollada como ejercicio de maquetación y funcionalidad **responsive**.
 
@@ -60,7 +60,13 @@ Gestión de `aria-expanded` en elementos interactivos.
 ```bash
 npm install      # Instalar dependencias
 npm run dev      # Ejecutar en entorno local (http://localhost:5173)
-npm run build    # Generar versión optimizada en /dist
+npm run build    # Generar versión optimizada en /docs
+```
+
+## Web pública
+
+```bash
+https://rubenfpic.github.io/tierraymesa
 ```
 
 ## Notas
