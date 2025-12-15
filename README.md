@@ -7,6 +7,7 @@ Web de inspiración para escapadas rurales centradas en gastronomía, vino y tur
 - **Vite 7.0.4** como entorno de desarrollo y compilación.
 - **SASS 1.89.2** con sintaxis SCSS para los estilos.
 - **JavaScript modular** para la lógica y la generación de componentes.
+- **Codex** como agente IA de apoyo al desarrollo
 
 ## Maquetación
 
@@ -57,17 +58,21 @@ Gestión de `aria-expanded` en elementos interactivos.
 
 ## Instalación y arranque del proyecto
 
+Instalar dependencias
 ```bash
-npm install      # Instalar dependencias
-npm run dev      # Ejecutar en entorno local (http://localhost:5173)
-npm run build    # Generar versión optimizada en /docs
+npm install
+```
+Ejecutar en entorno local `http://localhost:5173`
+```bash
+npm run dev
+```
+Generar versión optimizada en `/docs`
+```bash
+npm run build
 ```
 
 ## Web pública
-
-```bash
-https://rubenfpic.github.io/tierraymesa
-```
+<a href="https://rubenfpic.github.io/tierraymesa" target="_blank" rel="noopener">https://rubenfpic.github.io/tierraymesa</a>
 
 ## Notas
 
